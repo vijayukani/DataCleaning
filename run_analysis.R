@@ -60,7 +60,8 @@ run.analysis <- function () {
   write.csv(dataset, file = 'rawdata.csv', row.names = FALSE)
   write.csv(tidy.dataset, file = 'tidydata.csv',
 	    row.names = FALSE, quote = FALSE)
-
+  write.table(tidy.dataset, file = 'tidydata.txt',sep = " | ",
+	    row.names = FALSE, quote = FALSE)
   # Return the tidy data set
   tidy.dataset
 }
